@@ -10,6 +10,7 @@
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    
   </head>
   <body class="w-full bg-legYellow">
     
@@ -100,11 +101,17 @@
             <div id="product-story" class="mt-8 p--sm">Imagine a future in which your collegaues are pixels, your interactions transactional, your investments are free from the limit of space and time, and your friends can be generated instead of made. This is the future of luxury. Apply within.
           </div>
           <!-- Bind data from sizes available, disable and set any out of stock to :disabled -->
-          <div id="product-size" x-data="{sizes:['S','M','L','XL']}" class="flex flex-row justify-center mt-8 -ml-2">
+          <!-- <div id="product-size" x-data="{sizes:['S','M','L','XL']}" class="flex flex-row justify-center mt-8 -ml-2">
             <template x-for="size in sizes">
               <button class="ml-2 transition-all duration-250 btn btnSize" x-text="size"></button>
             </template>
+          </div> -->
+          <div id="product-size" x-data="{sizes:['S','M','L','XL']}" class="flex flex-row justify-center mt-8 -ml-2">
+            <template x-for="size in sizes">
+              <button id="btnSizeID" class="ml-2 transition-all duration-250 btn btnSize" x-text="size"></button>
+            </template>
           </div>
+          
         </div>
       </div>
     </div>
@@ -183,5 +190,7 @@
 </section>
 
     <script src="../../dist/main.js"></script>
+    <script src="../../src/js/main.js"></script>
+    
   </body>
 </html>

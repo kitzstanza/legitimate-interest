@@ -243,16 +243,16 @@ module.exports = {
           borderRadius: "1rem",
           padding: ".75rem",
 
-          "&:hover, &checked": {
+          "&:hover": {
             backgroundColor: config("theme.colors.legBlack"),
             color: config("theme.colors.legYellow"),
           },
-          "&:selected": {
-            backgroundColor: config("theme.colors.legBlack"),
-          },
-          "&disabled": {
-            opacity: ".05",
-          },
+        },
+        ".btnSelected": {
+          backgroundColor: config("theme.colors.legBlack"),
+        },
+        ".btnDisabled": {
+          opacity: ".05",
         },
       }
       addComponents(buttons)

@@ -650,12 +650,12 @@ a:hover {
   padding: .75rem;
 }
 
-.btnSize:hover, .btnSizechecked {
+.btnSize:hover {
   background-color: #0C0C0C;
   color: #e3e562;
 }
 
-.btnSize:selected {
+.btnSelected {
   background-color: #0C0C0C;
 }
 
@@ -880,14 +880,6 @@ a:hover {
   left: 50%;
 }
 
-.top-48 {
-  top: 12rem;
-}
-
-.top-12 {
-  top: 3rem;
-}
-
 .isolate {
   isolation: isolate;
 }
@@ -1039,14 +1031,6 @@ a:hover {
 
 .-ml-2 {
   margin-left: -0.5rem;
-}
-
-.mt-40 {
-  margin-top: 10rem;
-}
-
-.block {
-  display: block;
 }
 
 .flex {
@@ -1458,21 +1442,6 @@ a:hover {
   background-color: rgb(103 232 249 / var(--tw-bg-opacity));
 }
 
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
-.bg-cyan-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(207 250 254 / var(--tw-bg-opacity));
-}
-
-.bg-red-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-}
-
 .bg-red-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
@@ -1481,6 +1450,11 @@ a:hover {
 .bg-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(207 250 254 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-25 {
@@ -2306,10 +2280,6 @@ a:hover {
   .lg\:sticky {
     position: -webkit-sticky;
     position: sticky;
-  }
-
-  .lg\:top-48 {
-    top: 12rem;
   }
 
   .lg\:top-12 {
