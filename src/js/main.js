@@ -33,22 +33,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   })
 })
 
-let sizeState
+// let sizeState
 
-// function checkSize() {
+// // function checkSize() {
+// //   if (sizeState === "") {
+// //     document.querySelector("btnSelected")
+// //     sizeState = size
+// //     console.log(sizeState)
+// //   }
+// // }
+
+// document.getElementById("btnSizeID").addEventListener("click", function () {
+//   alert("WORKING")
 //   if (sizeState === "") {
-//     document.querySelector("btnSelected")
+//     document.querySelector("btnSize")
 //     sizeState = size
 //     console.log(sizeState)
 //   }
-// }
-
-document.getElementById("btnSizeID").addEventListener("click", function () {
-  alert("WORKING")
-  if (sizeState === "") {
-    document.querySelector("btnSize")
-    sizeState = size
-    console.log(sizeState)
-  }
-})
-console.log("WORKING")
+// })
+// console.log("WORKING")

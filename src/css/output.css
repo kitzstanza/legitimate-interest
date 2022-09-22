@@ -657,6 +657,17 @@ a:hover {
 
 .btnSelected {
   background-color: #0C0C0C;
+  color: #e3e562;
+}
+
+.btnColor {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: red;
+  outline: 1px solid;
+  outline-offset: 4px;
+  outline-color: #0C0C0C;
 }
 
 .card-primary {
@@ -937,6 +948,11 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -1031,6 +1047,10 @@ a:hover {
 
 .-ml-2 {
   margin-left: -0.5rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .flex {
@@ -1238,6 +1258,10 @@ a:hover {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .list-decimal {
@@ -1457,6 +1481,11 @@ a:hover {
   background-color: rgb(207 250 254 / var(--tw-bg-opacity));
 }
 
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -1586,6 +1615,10 @@ a:hover {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
 }
 
 .text-left {
@@ -1916,6 +1949,46 @@ a:hover {
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
   will-change: transform;
+}
+
+.modal {
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.model-inner {
+  background-color: white;
+  border-radius: 0.5em;
+  max-width: 600px;
+  padding: 2em;
+  margin: auto;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.75;
 }
 
 .before\:pr-2::before {

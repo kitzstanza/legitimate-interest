@@ -250,9 +250,19 @@ module.exports = {
         },
         ".btnSelected": {
           backgroundColor: config("theme.colors.legBlack"),
+          color: config("theme.colors.legYellow"),
         },
         ".btnDisabled": {
           opacity: ".05",
+        },
+        ".btnColor": {
+          width: "36px",
+          height: "36px",
+          borderRadius: "50%",
+          backgroundColor: "red",
+          outline: "1px solid",
+          outlineOffset: "4px",
+          outlineColor: config("theme.colors.legBlack"),
         },
       }
       addComponents(buttons)

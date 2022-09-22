@@ -12,7 +12,7 @@
     ></script>
     
   </head>
-  <body class="w-full bg-legYellow">
+  <body class="w-full bg-legYellow" x-data="{'isModalOpen': false}" x-on:keydown.escape="isModalOpen=false">
     
     <!-- Mobile nav elements -->
     <div class="relative z-30 w-full md:hidden">
@@ -97,20 +97,21 @@
             </div>
             <div id="material">Material: Organic EU Cotton OEKO-TEX® Certified
             </div>
-            <div id="size-guide"><a href="#">Size Guide</a></div>
+            <div id="size-guide"><a class="cursor-pointer" x-on:click="isModalOpen = true">Size Guide</a></div>
             <div id="product-story" class="mt-8 p--sm">Imagine a future in which your collegaues are pixels, your interactions transactional, your investments are free from the limit of space and time, and your friends can be generated instead of made. This is the future of luxury. Apply within.
           </div>
           <!-- Bind data from sizes available, disable and set any out of stock to :disabled -->
-          <!-- <div id="product-size" x-data="{sizes:['S','M','L','XL']}" class="flex flex-row justify-center mt-8 -ml-2">
+          
+          <div id="product-size" x-data="{sizeState: '', sizes:['S','M','L','XL']}" class="flex flex-row justify-center mt-8 -ml-2">
             <template x-for="size in sizes">
-              <button class="ml-2 transition-all duration-250 btn btnSize" x-text="size"></button>
-            </template>
-          </div> -->
-          <div id="product-size" x-data="{sizes:['S','M','L','XL']}" class="flex flex-row justify-center mt-8 -ml-2">
-            <template x-for="size in sizes">
-              <button id="btnSizeID" class="ml-2 transition-all duration-250 btn btnSize" x-text="size"></button>
+              <button @click="sizeState = size" :class="{'btnSelected': sizeState === size}" id="btnSizeID" class="ml-2 transition-all duration-250 btn btnSize" x-text="size"></button>
             </template>
           </div>
+          <div id="variant-swatches" class="flex flex-row justify-center py-4 pr-5 my-4 bg-slate-200">
+            <button class="ml-4 btnColor"></button>
+            <button class="ml-4 btnColor"></button>
+          </div>
+          
           
         </div>
       </div>
@@ -190,7 +191,25 @@
 </section>
 
     <script src="../../dist/main.js"></script>
-    <script src="../../src/js/main.js"></script>
+    <!-- Modals -->
+    
+    <!-- Size Guide Modal -->
+    <div class="modal" role="dialog" tabindex="-1" x-show="isModalOpen" x-on:click.away="isModalOpen = false" x-cloak x-transition>
+      <div class="model-inner">
+        <div class="modal-header">
+          <h3>Hello World</h3>
+          <button aria-label="Close" x-on:click="isModalOpen=false">✖</button>
+        </div>
+        <p>
+          Natus earum velit ab nobis eos. Sed et exercitationem voluptatum omnis
+          dolor voluptates. Velit ut ipsam sunt ipsam nostrum. Maiores officia
+          accusamus qui sapiente. Dolor qui vel placeat dolor nesciunt quo dolor
+          dolores. Quo accusamus hic atque nisi minima.
+        </p>
+      </div>
+    </div>
+    <div class="overlay" x-show="isModalOpen" x-cloak></div>
+
     
   </body>
 </html>
