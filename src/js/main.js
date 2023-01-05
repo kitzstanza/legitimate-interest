@@ -15,12 +15,9 @@ const client = contentful.createClient({
 // Alpine.start()
 
 client
-  .getEntries({
-    content_type: 'homePage',
-  })
-  .then((response) => console.log(response.items.fields.heroVideo))
-  .catch(console.error)
-
+  .getEntry('1xMMnzTbEPlQzgmMBZUj1B')
+  .then((entry) => console.log(entry.fields.heroVideo.fields.file.url))
+  .catch((err) => console.log(err))
 //////////////////
 
 //////////////////

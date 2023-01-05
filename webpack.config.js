@@ -1,6 +1,6 @@
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['', '.js', '.jsx'],
     fallback: { assert: false },
   },
   entry: './src/js/main.js', //path relative to this file
