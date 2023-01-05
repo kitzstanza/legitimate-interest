@@ -1,9 +1,10 @@
 module.exports = {
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
+    fallback: { assert: false },
   },
-  entry: "./src/js/main.js", //path relative to this file
+  entry: './src/js/main.js', //path relative to this file
   output: {
-    filename: "./app.bundle.js", //path relative to this file
+    filename: './app.bundle.js', //path relative to this file
   },
 }

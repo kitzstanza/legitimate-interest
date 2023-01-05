@@ -1,16 +1,4 @@
-// Mobile Menu
 
-const menuBtn = document.getElementById("menu-btn")
-const mobilebg = document.getElementById("mobile-menu-bg")
-const mobilenav = document.getElementById("mobile-nav")
-
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("open")
-  mobilebg.classList.toggle("flex")
-  mobilenav.classList.toggle("flex")
-  mobilebg.classList.toggle("hidden")
-  mobilenav.classList.toggle("hidden")
-})
 
 // Homepage production section
 
